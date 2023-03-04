@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="/static/css/main.css">
   </head>
   <body>
-  <header class="py-3 mb-4">
+  <header class="py-3 mb-4 border-bottom">
     <div class="container d-flex flex-wrap justify-content-center">
       <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
-        <span class="fs-3">NOTICES</span>
+        <span class="fs-3 fw-bold text-primary">NOTICES</span>
       </a>
       <button class="col-12 col-lg-auto mb-3 mb-lg-0 btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Создать заметку</button>
     </div>
@@ -33,7 +33,7 @@
               </div>
               <div class="mb-3">
                 <label for="noteText" class="form-label">Текст</label>
-                <textarea class="form-control" name="text" id="noteText" rows="3"></textarea>
+                <textarea class="form-control" name="text" id="noteText" rows="5"></textarea>
               </div>
             </div>
             <div class="modal-footer">

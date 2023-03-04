@@ -22,9 +22,8 @@ public class NoteController {
     }
 
     @PostMapping("/create")
-    public String create(Model model, Note note) {
+    public String create(Note note) {
         noteService.create(note);
-        model.addAttribute("message", "Заметка добавлена!");
         return "redirect:/";
     }
 
@@ -36,9 +35,7 @@ public class NoteController {
 
     @PostMapping("/update/{id}")
     public String update(@PathVariable("id") Long id, Note note, Model model) {
-        if (noteService.update(id, note)) {
-            model.addAttribute("message", "Заметка изменена");
-        }
+        noteService.update(id, note);
         model.addAttribute("note", noteService.getNoteById(id));
         return "redirect:/";
     }
