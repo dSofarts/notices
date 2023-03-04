@@ -12,9 +12,9 @@
   <header class="py-3 mb-4">
     <div class="container d-flex flex-wrap justify-content-center">
       <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
-        <span class="fs-4">NOTICES</span>
+        <span class="fs-3">NOTICES</span>
       </a>
-      <a href="" class="col-12 col-lg-auto mb-3 mb-lg-0 btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Создать заметку</a>
+      <button class="col-12 col-lg-auto mb-3 mb-lg-0 btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Создать заметку</button>
     </div>
   </header>
   <div class="container">
@@ -25,7 +25,7 @@
             <h1 class="modal-title fs-5" id="staticBackdropLabel">Создать новую заметку:</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
           </div>
-          <form action="" method="post">
+          <form action="/create" method="post">
             <div class="modal-body">
               <div class="mb-3">
                 <label for="noteTitle" class="form-label">Заголовок</label>
@@ -33,7 +33,7 @@
               </div>
               <div class="mb-3">
                 <label for="noteText" class="form-label">Текст</label>
-                <textarea class="form-control" name="" id="noteText" rows="3"></textarea>
+                <textarea class="form-control" name="text" id="noteText" rows="3"></textarea>
               </div>
             </div>
             <div class="modal-footer">

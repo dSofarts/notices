@@ -18,4 +18,27 @@ public class NoteService {
         return noteRepository.findAll();
     }
 
+    public void create(Note note) {
+        noteRepository.save(note);
+        log.info("Saving new Note: {}", note.getId());
+    }
+
+    public boolean update(Long id, Note note) {
+        Note currentNote = getNoteById(id);
+        if (currentNote != null) {
+            currentNote.setTitle(note.getTitle());
+            currentNote.setText(note.getText());
+            noteRepository.save(currentNote);
+            return true;
+        }
+        return false;
+    }
+
+    public void delete(Long id) {
+        noteRepository.delete(getNoteById(id));
+    }
+
+    public Note getNoteById(Long id) {
+        return noteRepository.findById(id).orElse(null);
+    }
 }

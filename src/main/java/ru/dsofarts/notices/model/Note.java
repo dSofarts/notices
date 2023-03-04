@@ -27,14 +27,14 @@ public class Note {
     @Column(name = "title")
     private String title;
 
-    @Column(name = "text")
+    @Column(name = "text", columnDefinition = "text")
     private String text;
 
     @Column(name = "dateOfCreated")
     private LocalDateTime dateOfCreated;
 
     @PrePersist
-    private void init() {
+    private void init() {;
         dateOfCreated = LocalDateTime.now();
     }
 }
